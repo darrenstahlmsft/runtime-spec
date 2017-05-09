@@ -1,8 +1,10 @@
 {
     "definitions": {
-        "cpuShares": {
+        "perTenThousand": {
             "description": "Relative weight to other containers with CPU Shares defined",
             "type": "integer",
+            "minimum": 0,
+            "maximum": 10000
         }
     }
 }

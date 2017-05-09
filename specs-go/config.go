@@ -458,9 +458,9 @@ type WindowsMemoryResources struct {
 type WindowsCPUResources struct {
 	// Number of CPUs available to the container.
 	Count *uint64 `json:"count,omitempty"`
-	// CPU shares (relative weight to other containers with cpu shares). Range is from 1 to 10000.
+	// CPU shares (relative weight to other containers with cpu shares). Range is from 0 to 10000. If 0 is specified, shares are omitted.
 	Shares *uint16 `json:"shares,omitempty"`
-	// Specifies the portion of processor cycles that this container can use as a percentage times 100.
+	// Specifies the portion of processor cycles that this container can use as a percentage times 100. Range is from 0 to 10000. If 0 is specified, no limit is applied.
 	Maximum *uint16 `json:"maximum,omitempty"`
 }
 
